@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KINGVON-XMD Pairing Code</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>KINGVON-XMD Pairing Code</h1>
+    
+    <form action="/pair" method="POST">
+      <input type="text" name="phone" placeholder="Enter your WhatsApp number" required />
+      <button type="submit">Generate Code</button>
+    </form>
+
+    <% if (code) { %>
+      <div class="pairing-box">
+        <p><%= code %></p>
+      </div>
+    <% } %>
+
+    <small>Code is tied to your number</small>
+  </div>
+</body>
+</html>
